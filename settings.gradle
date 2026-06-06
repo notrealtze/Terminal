@@ -1,0 +1,18 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+dependencyResolution {
+    default {
+        fromRepository {
+            google()
+            mavenCentral()
+        }
+    }
+}
+
+rootProject.name = "FileManager"
