@@ -6,6 +6,8 @@ A lightweight Android file manager application with a simple and intuitive inter
 
 **Working APK ready to download and install!**
 
+[![Build and Sign APK](https://github.com/notrealtze/Terminal/actions/workflows/build.yml/badge.svg)](https://github.com/notrealtze/Terminal/actions/workflows/build.yml)
+
 ## 📥 Downloads
 
 ### Direct Download
@@ -24,6 +26,8 @@ git clone https://github.com/notrealtze/Terminal.git
 - ✅ Sorted file display
 - ✅ Click folders to explore contents
 - ✅ Works on Android 5.0+ (API Level 21+)
+- ✅ **Automatically built and signed with GitHub Actions**
+- ✅ **Releases published automatically**
 
 ## 📦 Project Structure
 
@@ -91,19 +95,33 @@ The app requests the following permissions to function:
 
 ## 🛠️ Build Methods
 
-### Method 1: Python Build Script (Easiest - No Gradle)
+### Method 1: GitHub Actions (Automatic - Recommended)
+✅ **Fully automated build & sign workflow**
+- Builds automatically on every push
+- Digitally signs the APK
+- Creates releases automatically
+- No local setup needed!
+
+**Setup Instructions:**
+1. See [GITHUB_ACTIONS_SETUP.md](GITHUB_ACTIONS_SETUP.md)
+2. Add 4 secrets to your GitHub repository
+3. APK is built and signed automatically
+
+### Method 2: Python Build Script (Local - No Gradle)
 ```bash
 python3 build_apk_manual.py
 ```
 
-### Method 2: Android Studio (Most Reliable)
+### Method 3: Android Studio (Most Reliable)
 1. Import project into Android Studio
 2. Sync Gradle files
 3. Build → Build APK(s)
 
-### Method 3: Gradle Command Line
+### Method 4: Gradle Command Line
 ```bash
 ./gradlew build
+# or for release build:
+./gradlew assembleRelease
 ```
 
 ## 📄 License
